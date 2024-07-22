@@ -5,6 +5,7 @@
 ## 📃 RULE
 - 주차별로 정해진 주제에 대해 각자 맡은 할당량만큼 내용 정리를 해온다.
 - 내용정리뿐만 아니라 해당 내용에서 나올 수 있는 면접 질문과 예상 답변까지 준비해오는 것을 원칙으로 한다.
+- 
 
 ## ⏰ Schedule
 - 주 1회 비대면 진행 (매주 월요일)
@@ -19,7 +20,7 @@
 <br>
 <a href="https://github.com/WooVictory/Ready-For-Tech-Interview?tab=readme-ov-file">Ready-For-Tech-Interview</a>
 
-## 📌 [Java](https://github.com/SunYerim/CSStudy)
+## 📌 [Java](https://github.com/SunYerim/CSStudy/tree/master/Java)
 - [[Java] Java 컴파일 과정]()
  - [[Java] Call by Value vs Call by Reference]()
   - [[Java] String & StringBuffer & StringBuilder]()
@@ -49,9 +50,36 @@
 - 
 ## 📌 Database
 - 
-## 📌 Network
-- 
+## 📌 [Network](https://github.com/SunYerim/CSStudy/tree/master/Network)
+- OSI 7 계층
+- TCP 3 way handshake & 4 way handshake
+- TCP/IP 흐름제어 & 혼잡제어
+- UDP
+- 대칭키 & 공개키
+- HTTP & HTTPS
+- TLS/SSL handshake
+- 로드 밸런싱(Load Balancing)
+- Blocking,Non-blocking & Synchronous,Asynchronous
+- Blocking & Non-Blocking I/O
+
 ## 📌 
+
+
+
+---
+## 스터디 진행 현황
+
+| 주차  | 날짜       | 주제   | 선예림 | 오동규 | 배선영 | 강민준 | 비고  |
+|-------|------------|--------|---------------|---------------|---------------|---------------|-------|
+| 1주차 | 2024-07-22 | Java  | 내용1        | 내용2        | 내용3        | 내용4        |       |
+| 2주차 | 2024-07-29 | Network  | OSI 7 계층, TCP 3 way handshake & 4 way handshake      | 대칭키 & 공개키, HTTP & HTTPS        | TLS/SSL handshake, 로드 밸런싱(Load Balancing)        | TCP/IP 흐름제어 & 혼잡제어, UDP         |       |
+| 3주차 | YYYY-MM-DD | Web | 내용1        | 내용2        | 내용3        | 내용4        |       |
+| 4주차 | YYYY-MM-DD | Db  | 내용1        | 내용2        | 내용3        | 내용4        |       |
+| 5주차 | YYYY-MM-DD | 주제5  | 내용1        | 내용2        | 내용3        | 내용4        |       |
+| 6주차 | YYYY-MM-DD | 주제6  | 내용1        | 내용2        | 내용3        | 내용4        |       |
+| 7주차 | YYYY-MM-DD | 주제7  | 내용1        | 내용2        | 내용3        | 내용4        |       |
+| 8주차 | YYYY-MM-DD | 주제8  | 내용1        | 내용2        | 내용3        | 내용4        |       |
+
 
 
 
