@@ -62,7 +62,22 @@
 - Blocking,Non-blocking & Synchronous,Asynchronous
 - Blocking & Non-Blocking I/O
 
-## 📌 
+## 📌 [OS](https://github.com/SunYerim/CSStudy/tree/master/OS)
+- 운영체제란
+- 프로세스 vs 스레드
+- 프로세스 주소 공간
+- 인터럽트(Interrupt)
+- 시스템 콜(System Call)
+- PCB와 Context Switching
+- IPC(Inter Process Communication)
+- CPU 스케줄링
+- 데드락(DeadLock)
+- Race Condition
+- 세마포어(Semaphore) & 뮤텍스(Mutex)
+- 페이징 & 세그먼테이션 (PDF)
+- 페이지 교체 알고리즘
+- 메모리(Memory)
+- 파일 시스템
 
 
 
@@ -73,7 +88,7 @@
 |-------|------------|--------|---------------|---------------|---------------|---------------|-------|
 | 1주차 | 2024-07-22 | Java  | 내용1        | 내용2        | 내용3        | 내용4        |       |
 | 2주차 | 2024-07-29 | Network  | OSI 7 계층, TCP 3 way handshake & 4 way handshake      | 대칭키 & 공개키, HTTP & HTTPS        | TLS/SSL handshake, 로드 밸런싱(Load Balancing)        | TCP/IP 흐름제어 & 혼잡제어, UDP         |       |
-| 3주차 | YYYY-MM-DD | Web | 내용1        | 내용2        | 내용3        | 내용4        |       |
+| 3주차 | 2024-08-05 | Network & OS | 운영체제란, 프로세스와 스레드        | 프로세스 주소 공간, 인터럽트(Interrupt)       | Blocking,Non-blocking & Synchronous,Asynchronous, Blocking & Non-Blocking I/O        | 시스템 콜(System Call), PCB와 Context Switching      |       |
 | 4주차 | YYYY-MM-DD | Db  | 내용1        | 내용2        | 내용3        | 내용4        |       |
 | 5주차 | YYYY-MM-DD | 주제5  | 내용1        | 내용2        | 내용3        | 내용4        |       |
 | 6주차 | YYYY-MM-DD | 주제6  | 내용1        | 내용2        | 내용3        | 내용4        |       |
