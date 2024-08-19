@@ -8,7 +8,7 @@
 - 
 
 ## ⏰ Schedule
-- 주 1회 비대면 진행 (매주 월요일)
+- 주 1회 비대면 진행 (매주 월요일 9시)
 - 필요 시, 오프라인 스터디 진행
 
 ## 📜 학습 주제
@@ -49,7 +49,18 @@
 ## 📌 Spring
 - 
 ## 📌 Database
-- 
+- 키(Key) 정리
+- SQL - JOIN
+- SQL Injection
+- SQL vs NoSQL
+- 정규화(Normalization)
+- 이상(Anomaly)
+- 인덱스(INDEX)
+- 트랜잭션(Transaction)
+- 트랜잭션 격리 수준(Transaction Isolation Level)
+- 저장 프로시저(Stored PROCEDURE)
+- 레디스(Redis)
+
 ## 📌 [Network](https://github.com/SunYerim/CSStudy/tree/master/Network)
 - OSI 7 계층
 - TCP 3 way handshake & 4 way handshake
@@ -89,8 +100,8 @@
 | 1주차 | 2024-07-22 | Java  | 내용1        | 내용2        | 내용3        | 내용4        |       |
 | 2주차 | 2024-07-29 | Network  | OSI 7 계층, TCP 3 way handshake & 4 way handshake      | 대칭키 & 공개키, HTTP & HTTPS        | TLS/SSL handshake, 로드 밸런싱(Load Balancing)        | TCP/IP 흐름제어 & 혼잡제어, UDP         |       |
 | 3주차 | 2024-08-05 | Network & OS | 운영체제란, 프로세스와 스레드        | 프로세스 주소 공간, 인터럽트(Interrupt)       | Blocking,Non-blocking & Synchronous,Asynchronous, Blocking & Non-Blocking I/O        | 시스템 콜(System Call), PCB와 Context Switching      |       |
-| 4주차 | YYYY-MM-DD | Db  | 내용1        | 내용2        | 내용3        | 내용4        |       |
-| 5주차 | YYYY-MM-DD | 주제5  | 내용1        | 내용2        | 내용3        | 내용4        |       |
+| 4주차 | 2024-08-19 | OS  | Race Condition, 세마포어 & 뮤텍스        |   IPC, CPU 스케줄링, 데드락      | 페이징 & 세그먼테이션, 페이지 교체 알고리즘       | 메모리, 파일 시스템        |       |
+| 5주차 | 2024-08-26 | Database  | 인덱스, 트랜잭션, 트랜잭션 격리 수준        | 키 정리, SQL Join        | SQL Injection, SQL & NoSQL        | 정규화, 이상        |       |
 | 6주차 | YYYY-MM-DD | 주제6  | 내용1        | 내용2        | 내용3        | 내용4        |       |
 | 7주차 | YYYY-MM-DD | 주제7  | 내용1        | 내용2        | 내용3        | 내용4        |       |
 | 8주차 | YYYY-MM-DD | 주제8  | 내용1        | 내용2        | 내용3        | 내용4        |       |
