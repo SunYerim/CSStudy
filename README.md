@@ -5,11 +5,12 @@
 ## 📃 RULE
 - 주차별로 정해진 주제에 대해 각자 맡은 할당량만큼 내용 정리를 해온다.
 - 내용정리뿐만 아니라 해당 내용에서 나올 수 있는 면접 질문과 예상 답변까지 준비해오는 것을 원칙으로 한다.
-- 
+
 
 ## ⏰ Schedule
 - 주 1회 비대면 진행 (매주 월요일 9시)
 - 필요 시, 오프라인 스터디 진행
+- 08.28 ~ 전면 온라인 진행
 
 ## 📜 학습 주제
 학습 주제는 아래의 사이트를 기반으로 선정하였습니다.
@@ -44,11 +45,27 @@
 - 
 ## 📌 DataStructure
 - 
-## 📌Web
-- 
+## 📌[Web](https://github.com/SunYerim/CSStudy/tree/master/Web)
+- 브라우저 동작 방법
+- 쿠키(Cookie) & 세션(Session)
+- HTTP Request Methods
+- HTTP Status Code
+- REST API
+- 웹 서버와 WAS의 차이점
+- OAuth
+- JWT(JSON Web Token)
+- Authentication and Authorization
+- 로그 레벨
+- UI와 UX
+- CSR & SSR
+- Vue.js vs React
+- 네이티브 앱 & 웹 앱 & 하이브리드 앱
+- PWA(Progressive Web App)
+- CSRF & XSS 
+
 ## 📌 Spring
 - 
-## 📌 Database
+## 📌 [Database](https://github.com/SunYerim/CSStudy/tree/master/Database)
 - 키(Key) 정리
 - SQL - JOIN
 - SQL Injection
@@ -102,7 +119,7 @@
 | 3주차 | 2024-08-05 | Network & OS | 운영체제란, 프로세스와 스레드        | 프로세스 주소 공간, 인터럽트(Interrupt)       | Blocking,Non-blocking & Synchronous,Asynchronous, Blocking & Non-Blocking I/O        | 시스템 콜(System Call), PCB와 Context Switching      |       |
 | 4주차 | 2024-08-19 | OS  | Race Condition, 세마포어 & 뮤텍스        |   IPC, CPU 스케줄링, 데드락      | 페이징 & 세그먼테이션, 페이지 교체 알고리즘       | 메모리, 파일 시스템        |       |
 | 5주차 | 2024-08-26 | Database  | 인덱스, 트랜잭션, 트랜잭션 격리 수준        | 키 정리, SQL Join        | SQL Injection, SQL & NoSQL        | 정규화, 이상        |       |
-| 6주차 | YYYY-MM-DD | 주제6  | 내용1        | 내용2        | 내용3        | 내용4        |       |
+| 6주차 | 2024-09-02 | Web  | redis, 브라우저 동작 방법, HTTP Request Methods        | 저장 프로시저(Stored PROCEDURE),  쿠키(Cookie) & 세션(Session), HTTP Status Code       | JWT        | REST API        |       |
 | 7주차 | YYYY-MM-DD | 주제7  | 내용1        | 내용2        | 내용3        | 내용4        |       |
 | 8주차 | YYYY-MM-DD | 주제8  | 내용1        | 내용2        | 내용3        | 내용4        |       |
 
