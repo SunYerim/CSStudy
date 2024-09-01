@@ -120,7 +120,7 @@
 | 4주차 | 2024-08-19 | OS  | Race Condition, 세마포어 & 뮤텍스        |   IPC, CPU 스케줄링, 데드락      | 페이징 & 세그먼테이션, 페이지 교체 알고리즘       | 메모리, 파일 시스템        |       |
 | 5주차 | 2024-08-26 | Database  | 인덱스, 트랜잭션, 트랜잭션 격리 수준        | 키 정리, SQL Join        | SQL Injection, SQL & NoSQL        | 정규화, 이상        |       |
 | 6주차 | 2024-09-02 | Web  | redis, 브라우저 동작 방법, HTTP Request Methods        | 저장 프로시저(Stored PROCEDURE),  쿠키(Cookie) & 세션(Session), HTTP Status Code       | JWT        | REST API        |       |
-| 7주차 | YYYY-MM-DD | 주제7  | 내용1        | 내용2        | 내용3        | 내용4        |       |
+| 7주차 | 2024-09-09 | Web  | CSR&SSR, 네이티브 앱&웹 앱&하이브리드 앱        |   Authentication and Authorization, 로그 레벨      | 웹 서버와 WAS의 차이점, OAuth        | PWA, CSRF & XSS        |       |
 | 8주차 | YYYY-MM-DD | 주제8  | 내용1        | 내용2        | 내용3        | 내용4        |       |
 
 
