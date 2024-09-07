@@ -1,20 +1,3 @@
----
-layout: post
-title: CSRF(Cross Site Request Forgery)
-date: 2024-09-07 01:22 +0900
-pin: false
-math: true
-mermaid: true
-description:
-categories:
-- Computer Science
-- Web
-- Security
-tags:
-- csrf
-- security
-- countermeasure
----
 ## CSRF란?
 
 Cross-Site Request Forgery (CSRF) 공격에 대해서 이해하기 위해서, 가장 먼저 Cross-Site에서의 Request가 무엇이고 이것의 문제점을 알아보자
@@ -140,6 +123,95 @@ CSRF 공격을 3가지 요소로 설명하겠다.
 
    
 
+## XSS(Cross-site Scripting)란?
+
+* code injection attack의 일종
+  * victim, attacker, target website 로 설명할 예정
+* victim의 browser에서 target website에 삽입된 javascript 코드가 실행되면서, target website에서 사용자가 의도하지 않은 행위가 실행되는 것
+
+<img src="https://raw.githubusercontent.com/joonamin/UpicImageRepo/master/uPic/Screenshot 2024-09-07 at 6.12.40 PM.png" alt="Screenshot 2024-09-07 at 6.12.40 PM" style="zoom:80%;" />
+
+> cross site scripting 의 cross는 target website를 교차(cross)하여 malicious code를 실행한다는 것이다. 여기서 [CSRF](https://joonamin.github.io/posts/csrf/)의 Cross-Site 개념과는 다르다는 것을 상기하자
+> {: .prompt-warning}
+
+XSS에서 malicious code에 의하여 발생되는 요청은 same-site에서 발생하는 요청이기 때문에 해당 사이트에서 접근할 수 있는 쿠키 정보들을 모두 가져올 수 있다.
+
+* 공격 상황을 예시로 생각해보자
+  1. Attacker는 XSS 취약점이 존재하는 target website에 malicious code를 적재
+     * Non-persistent (Reflected) XSS Attack
+     * Persistent XSS Attack
+  2. victim은 특정 페이지에 접속하였을 때, 내장된 malicious code를 브라우저에서 실행하게 된다.
 
 
 
+### Persistent XSS Attack
+
+<img src="https://raw.githubusercontent.com/joonamin/UpicImageRepo/master/uPic/Screenshot 2024-09-07 at 6.56.00 PM.png" alt="Screenshot 2024-09-07 at 6.56.00 PM" style="zoom:80%;" />
+
+* attacker가 target website의 Persistent Storage에 malicious code를 삽입하는 방식
+* 특정 페이지를 가져올 때 마다, malicious code를 가져오게되고 이를 통하여 `공격자-피해자` 사이의 채널을 생성하여 유지하는 방법
+
+예를들자면 아래와 같은 상황이 있을 수 있겠다
+
+1. 특정 사용자의 페이지를 방문하게 된다면, 해당 사용자를 친구 추가하는 script를 실행
+2. 이 후, victim의 페이지에도 malicious code를 적재하도록 설정
+3. 추후, victim의 페이지를 방문하는 모든 사용자들은 1,2 번 과정을 거쳐서 또 다른 피해자를 만들어낸다.
+
+위 과정에서 `특정 사용자의 페이지` 에 해당하는 부분은 웹 서버의 persistent storage에 저장되는 정보이며, 지속적으로 추가적인 피해자를 만들어낼 수 있다.  (<u>Self Propagating XSS Attack</u>)
+
+<img src="https://raw.githubusercontent.com/joonamin/UpicImageRepo/master/uPic/Screenshot 2024-09-07 at 7.18.20 PM.png" alt="Screenshot 2024-09-07 at 7.18.20 PM" style="zoom:67%;" />
+
+
+
+### Non Persistent (Reflected) XSS Attack
+
+<img src="https://raw.githubusercontent.com/joonamin/UpicImageRepo/master/uPic/Screenshot 2024-09-07 at 7.05.08 PM.png" alt="Screenshot 2024-09-07 at 7.05.08 PM" style="zoom:80%;" />
+
+* 대부분의 웹 사이트들은 응답 정보에 요청 정보를 일부 포함하는 `Reflective`한 특성을 가지고 있음
+  * `"너 ~~에 대한 요청을 보냈고, 해당하는 정보는 ~~이다"` 
+* 이런 경우에, `Reflected Response` 에 대해서 적절한 **sanitizing 작업이 수행되지 않는다면**, <u>Reflected XSS 취약점을 가질 수 있다.</u>
+  * `http://www.test.com/search?input=<script>alert("attack");</script>` 의 요청주소로 GET요청을 보낼 경우, 적절하게 user input에 대한 sanitize작업이 이루어지지 않는다면
+  * `<script>alert("attack")</script>` 가 응답 메세지에 포함되면서, alert 창을 띄우게 된다.
+
+
+
+## XSS의 영향력
+
+* same site에서 사용자의 privilege를 포함하여 malicious code를 실행한다는 것을 상기하자
+* javascript 코드는 `DOM 객체`에 접근 가능하다.
+  * 사용자의 민감정보가 DOM 객체에 표현되는데, 이 정보들이 외부로 탈취당할 수 있다.
+  * 또한, DOM 객체를 조작하여 사용자에게 잘못된 정보를 보여줄 수 있다.
+* 사용자의 권한을 이용하여 웹 서버에 위조된 요청을 보낼 수 있다.
+  * Spoofing request
+
+
+
+## Countermeasure
+
+> XSS 취약점이 존재하는 웹 서버는 user input을 적절하게 sanitizing하지 않아서 실행 가능한 코드가 삽입되어, 브라우저에서 실행하는 것에서 기인한다.
+> {: .prompt-info}
+
+1. **Filter** 
+
+   * 사용자의 input에 대한 필터링 모듈을 도입하는 방식
+   * 블랙 리스트 기반의 방식
+
+2. **Encoding**
+
+   * 실행가능한 코드가 삽입되는 것을 방지하기 위해 특수 문자를 escape 처리
+   * e.g.) `<script>alert('XSS')</script>` ➡️ `&lt; script&gt; alert('XSS') ...`
+
+3. **Content Security Policy**
+
+   * **HTML에 JS 코드가 포함될 수 있고, 데이터와 실행 코드를 분리하지 않는 것에서 문제가 발생**
+     * 신뢰할 수 있는 script에 대한 정보를 서버가 제공해준다면 브라우저가 이 정보를 기반으로 실행하는 script를 구분할 수 있게된다.
+   * `Content-Security-Policy` 헤더로 응답 메세지에 포함된다.
+     * 브라우저는 이 헤더를 읽어서, 신뢰할 수 있는 script 코드에 대해서만 실행하도록 할 수 있다.
+     * `Content-Security-Policy: script-src 'self' 'https://apis.google.com'`
+       * 코드의 출처가 자기 자신(self)인 경우에만 실행
+       * 코드의 출처가 `https://apis.google.com` 인 경우에만 실행
+   * inline javascript에 대해서는 서버에서 생성한 `nonce` 정보를 포함시키는 것으로 컨텐트 보안 정책을 구현할 수 있다.
+     * `Content-Security-Policy: script-src 'nounce-12345'`
+     * `<script nonce=12345> ... </script>` 는 신뢰할 수 있는 inline script
+
+   
